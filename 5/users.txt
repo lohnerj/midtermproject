@@ -1,0 +1,2 @@
+lohnerjosh:$2y$10$7CPIjti37UnuTTbVRZ/AR.AjtfhSBXoFfTC8h3QcZOX4pMXWaCOYO:admin
+1:$2y$10$gc8QW.AAtekspD69NR.iJOfNPmlBvytgOUkMuw0O3Lw96bV3QzWMW:user

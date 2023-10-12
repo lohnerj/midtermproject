@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+   
+} else {
+    header('Location: login.php');
+}
+?>
+
 <!DOCTYPE html>
 <!-- http://localhost/midterm/startbootstrap-freelancer-gh-pages/midtermproject -->
 <html lang="en">
@@ -6,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>EP Website</title>
+        <title>Freelancer - Start Bootstrap Theme</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -21,7 +30,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Event Planning Website</a>
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -32,8 +41,15 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                     </ul>
-                    <a class="btn btn-outline-light" href="./5/login.php">Login</a>
-                    <a class="btn btn-outline-light" href="./5/register.php">Register</a>
+                    <?php 
+                     echo "Welcome, " . $_SESSION['username'] . "!<br>";
+                     echo "You are " . ($_SESSION['isAdmin'] ? 'an admin.' : 'a regular user.');
+
+                     if ($_SESSION['isAdmin']) {
+                        echo '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="manage.php">Manage</a></li>';
+                    }
+                    ?>
+                    <a class="btn btn-outline-light" href="./5/auth.php?action=logout">Logout</a>
                     
                 </div>
             </div>
@@ -42,9 +58,9 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/portfolio/calendar.png" alt="..." />
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Event Planning Website</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -52,7 +68,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Creation -- Planning -- Organization</p>
+                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -227,7 +243,7 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                       
+                        
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
@@ -235,7 +251,7 @@
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                       
+                        
                     </div>
                 </div>
             </div>
