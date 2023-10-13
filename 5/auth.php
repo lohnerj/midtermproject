@@ -20,11 +20,9 @@ function authenticateUser($username, $password) {
 }
 
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
-    // Perform the logout action, such as destroying the session or logging the user out
 
-    // After performing the logout action, redirect to index.php
     header('Location: ../index.php');
-    exit; // Make sure to exit to prevent further code execution
+    exit; 
 }
 
 
