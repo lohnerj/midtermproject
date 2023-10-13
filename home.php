@@ -1,4 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+   
+} else {
+    header('Location: login.php');
+}
+?>
+
 <!DOCTYPE html>
+<!-- http://localhost/midterm/startbootstrap-freelancer-gh-pages/midtermproject -->
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -31,6 +41,16 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                     </ul>
+                    <?php 
+                     echo "Welcome, " . $_SESSION['username'] . "!<br>";
+                     echo "You are " . ($_SESSION['isAdmin'] ? 'an admin.' : 'a regular user.');
+
+                     if ($_SESSION['isAdmin']) {
+                        echo '<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="manage.php">Manage</a></li>';
+                    }
+                    ?>
+                    <a class="btn btn-outline-light" href="./5/auth.php?action=logout">Logout</a>
+                    
                 </div>
             </div>
         </nav>
@@ -223,29 +243,15 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                        </p>
+                        
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
+                        
                     </div>
                 </div>
             </div>
