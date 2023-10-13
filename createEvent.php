@@ -19,7 +19,7 @@
     <body>
         <header class="masthead bg-primary text-white text-center" >
             <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="main navigation">
-                <ulclass ="navbar-nav ms-auto">
+                <ul class ="navbar-nav ms-auto">
                 <ul class ="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Home</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="createEvent.php">Create an Event</a></li>

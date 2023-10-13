@@ -52,7 +52,7 @@
           }
         ?>
         <H1>Guest List<H1>
-        <form method="post" action="<?php echohtmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             Guest Names: <textarea name="guest names" rows="30" cols="40"><?php echo $name;?></textarea>
             <br><br>
             E-mail Addresses: <textarea name="email addresses" rows="20" cols="25"><?php echo $email;?></textarea>
