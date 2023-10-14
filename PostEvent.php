@@ -20,5 +20,7 @@
         <textarea id="eventSummary" name="eventSummary" rows="4" required></textarea><br>
         <button type="submit">Submit Review</button>
     </form>
+
+    <a href="home.php"><button>Go to Home</button></a>
 </body>
 </html>

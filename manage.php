@@ -7,6 +7,7 @@
     <h1>User Management</h1>
 
     <?php
+    
     $userFile = "./5/users.txt";
 
    
@@ -113,6 +114,13 @@ $events = [
             echo 'Time: ' . (isset($event['time']) ? $event['time'] : 'N/A') . '<br>';
             echo 'Location: ' . (isset($event['location']) ? $event['location'] : 'N/A') . '<br>';
             echo 'Description: ' . (isset($event['description']) ? $event['description'] : 'N/A'); 
+
+
+            echo '<form method="post" action="Tasks.php">';
+            echo '<input type="hidden" name="delete_event_id" value="' . $event['id'] . '">';
+            echo '<input type="submit" name="delete_event" value="Delete Event">';
+            echo '</form>';
+            
             echo '</li>';
         }
         echo '</ul>';

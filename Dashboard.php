@@ -15,6 +15,12 @@ $events = [
     <h1>Dashboard</h1>
     <h2>Events</h2>
       <?php
+    $events = [
+     ['id' => 1, 'title' => 'Event 1', 'date' => '2023-10-15'],
+     ['id' => 2, 'title' => 'Event 2', 'date' => '2023-11-01'],
+    ];
+    
+
     if (count($events) > 0) {
         echo '<ul>';
         foreach ($events as $event) {
