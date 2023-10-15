@@ -1,2 +1,2 @@
 lohnerjosh:$2y$10$RLX88uNuvpgF60gKBHqI6ui8CHn8F1nJe18ajAdQl74CkX.Hbk6.i:admin
-test:$2y$10$Ip3fNHQMKM1uG/WXM.WyfesLMdTzbCZT34WoFq/Ie2Zi7iUiNeWvi:admin
+testuser:$2y$10$Iag2dpdlL0CP28EevUxC.OtVYCH3GpuHROIhcHQfALSZjkLuic8FS:admin
